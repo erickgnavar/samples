@@ -1,0 +1,63 @@
+Manual Lisp
+==============================
+
+### Objetos lisp
+
+* Atomos: A, B, 12, 45, 34
+* Listas (2, (4, 3, 8))
+
+### Operadores Matemáticos
+
+```lisp
++ 2 3 4 5                   => 14
+- 3 6                       => -3
+* 3 5                       => 15
+* ( + 2 4 6 ) ( / 20 5 )    => 48
+/ 2 0
+```
+
+### Funciones Matemáticas
+
+```lisp
+ABS 3                       => 3
+ABS -5                      => 5
+MOD 7 2                     => 1
+MAX 1 2 3 4 5               => 5
+MIN 4 2 5 3 1               => 1
+```
+
+### Asignación de variables
+
+```lisp
+setq var 20                 => 20
+```
+
+### Predicado de tipos
+
+```lisp
+NULL var                    => T si var es NIL, NIL si no lo es
+ATOM var                    => T si var es un atomo, NIL si no lo es
+LISTP var                   => T si var es una lista, NIL si no lo es
+```
+
+### Predicados de igualdad
+
+```lisp
+EQUAL 5 ( + 2 3 )           => T
+EQUAL 4 7                   => NIL
+```
+
+### Búsqueda en una lista
+
+> Definimos una lista
+
+>```lisp
+setq l '( 1 ( 2 3 ) ( 4 5 ) 6 )'
+```
+
+```lisp
+CAR l                       => 1 | Retorna el primer valor de la lista
+FIRST l                     => 1 | Equivalente a CAR
+CDR l                       => (( 2 3 ) ( 4 5 ) 6 ) | Retorna la lista menos el primer elemento
+REST l                      => (( 2 3 ) ( 4 5 ) 6 ) | Equivalente a CDR
+```
